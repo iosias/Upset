@@ -1,0 +1,363 @@
+﻿#headertron {
+    color: seashell;
+    background-color: steelblue;
+    border-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 1;
+    padding:30px;
+    margin-bottom:10px;
+}
+
+.name-explain {
+    color: lawngreen;
+}
+
+#headertron > .lead {
+    color: lightsteelblue;
+}
+
+.build-set {
+    font-family: 'Segoe UI';
+    border: 1px solid #bbb;
+    border: 2px solid;
+    margin: 15px;
+    background: #ddd;
+}
+
+.champ-info {
+    vertical-align: bottom;
+    margin-left: 15px;
+}
+
+.champion-header {
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+
+.champion-title {
+    font-size: 15px;
+    color: #444;
+}
+
+.date-detail-block {
+    font-size: 20px;
+    font-weight: lighter;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top:10px;
+    vertical-align: bottom;
+}
+
+.champ-image {
+    height: 50px;
+    width: 50px;
+}
+
+    .champ-image > img,
+    .item-purchase-block > img,
+    .upgrade-option > img ,
+    .upgrade-preview > img {
+        height: 100%;
+        width: 100%;
+    }
+
+.champ-section {
+    background: #999;
+    border-right: 1px solid;
+    width: 270px;
+    height: 60px;
+}
+
+.build-set-header > div {
+    padding: 5px;
+}
+
+.download-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(120,120,120,.8);
+}
+
+.download-popover {
+    height: 330px;
+    width: 800px;
+    background: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -165px;
+    margin-left: -400px;
+    box-shadow: 5px 5px 10px #444;
+    border: 1px solid #666;
+}
+
+.download-popover-header {
+    height: 70px;
+    background-color: #3d703d;
+    color: #ddd;
+    font-size: 35px;
+    padding: 10px 20px;
+}
+
+.download-popover-body {
+    padding: 30px 10px;
+}
+
+    .download-popover-body input {
+        max-width: 300px;
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+.download-instructions {
+    font-size: 20px;
+}
+
+    .download-instructions li {
+        margin-bottom: 25px;
+    }
+
+.build-set-body {
+    border-top: 1px solid black;
+}
+
+.build-set hr {
+    border-color: #666;
+}
+
+.build-set-header {
+    background: #bbb;
+    height: 60px;
+}
+
+.purchase-group {
+    margin: 5px 10px;
+}
+
+.purchase-group-header {
+    font-size: 20px;
+    border-bottom: 1px solid #aaa;
+}
+
+.item-purchase-block {
+    margin: 5px;
+    border: 1px solid black;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+.upgrade-header > img {
+    margin-right: 20px;
+    border: 2px solid black;
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+}
+
+.download-build-button {
+    margin-top: 10px;
+    border-radius:0;
+    border:2px solid black;
+}
+
+.full-build-preview {
+    display: inline-block;
+    width: 360px;
+}
+
+    .full-build-preview > .item-purchase-block {
+        width: 40px;
+        height: 40px;
+    }
+
+.filepath {
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.file-path-guess {
+    color: steelblue;
+}
+
+.announcement {
+    background: #ddd;
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid #666;
+    margin: 15px;
+    text-align: center;
+}
+
+#error-results-div {
+    background: #fee;
+    padding: 20px;
+    font-size: 20px;
+    border: 1px solid #f33;
+    border-radius: 3px;
+    margin: 5px;
+    color: red;
+    text-align: center;
+}
+
+#spinner-img {
+    margin-left: 20px;
+}
+
+.upgradable {
+    padding: 5px;
+    background-color: steelblue;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px;
+}
+
+    .upgradable > img {
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+
+
+
+.unbuilt {
+    padding: 5px;
+    background-color: dimgray;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px;
+    cursor: pointer;
+}
+
+.build-set:not(.full-build) .build-indicator {
+    display:none;
+}
+
+.build-indicator {
+    background-color: #5cb85c;
+    width: 100px;
+    cursor: default;
+    border: 2px solid;
+    height: 40px;
+    text-align: center;
+    padding-top: 8px;
+    font-weight: bolder;
+    font-family: 'Century Gothic';
+}
+
+
+.build-set.ranked .build-set-header {
+    background: #EBFAFE;
+}
+
+.build-set.ranked .champ-section {
+    background: lightsteelblue;
+}
+
+
+.build-set.full-build .build-set-header {
+    background: #DCF9DC;
+}
+
+.build-set.full-build .champ-section {
+    background: #5cb85c;
+}
+
+.upgrades-block-container {
+    padding: 20px;
+    overflow: hidden;
+    position: absolute;
+    display: none;
+    margin-top: -27px;
+    margin-left: -30px;
+    cursor: default;
+}
+
+.upgradable:hover .upgrades-block-container {
+    display: block;
+}
+
+.upgrades-block {
+    border: 2px solid black;
+    background-color: #bbb;
+    box-shadow: 5px 5px 10px #444;
+}
+
+.upgrades-block:not(.unbuilt-upgrade)
+{
+    max-width: 365px;
+}
+
+.upgrades-block.unbuilt-upgrade{
+    max-width: 575px;
+}
+
+.upgrade-body {
+    padding-top: 10px;
+    max-height:400px;
+    overflow-y:auto;
+}
+
+.upgrade-option {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    cursor: pointer;
+}
+
+    .upgrade-option:hover {
+        border: 3px solid steelblue;
+    }
+
+.upgrade-header {
+    height: 50px;
+    padding: 5px;
+    border-bottom: 1px solid #666;
+    font-size: 25px;
+    background: steelblue;
+    color: mintcream;
+}
+
+.loading-message
+{
+    background:#eee;
+    border:2px solid #333;
+    padding: 20px;
+    margin:20px;
+    font-size:25px;
+    color:#333;
+}
+
+.click-prompt
+{
+    font-size:18px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top:10px;
+    color:#666;
+}
+
+#build-set-results
+{
+    padding-bottom:100px;
+}
+
+#games-found
+{
+    background: #DCF9DC;
+}
+
+.tool-tip
+{
+    background-color:lightsteelblue;
+}
+
+.completion-search
+{
+    margin-bottom:5px;
+}

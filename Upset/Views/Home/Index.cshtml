@@ -1,0 +1,53 @@
+﻿@using Upset.Models;
+@model UpsetModel
+
+@section scripts
+{
+    <script type="text/javascript">
+        $.CompleteItems = $.parseJSON('@(Html.Raw(new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(Model.CompleteItems)))');
+        $.PotentialUpgrades = $.parseJSON('@(Html.Raw(new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(Model.PotentialUpgrades)))');
+        prepEverything();
+    </script>
+}
+<div class="download-overlay none">
+    <div class="download-popover">
+        <div class="download-popover-header">Download Instructions</div>
+        <div class="download-popover-body">
+            <ol class="download-instructions">
+                <li>Name this build<input type="text" class="form-control" placeholder="Build Name" id="build-name-input"></li>
+                <li>
+                    <div>Right-click and save <a id="build-download-link">this link</a> to your League of Legends <span id="download-champ-name-span"></span> builds folder</div>
+                    <div><span class="filepath" title="We're guessing at this part"><span class="file-path-guess">C:\Riot Games\</span>League of Legends\Config\Champions\<span id="champ-key-replace"></span>\Recommended\</span></div>
+                </li>
+                <li>In game while shopping, change your recommended page to this one</li>
+                <li>Dominate</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" id="headertron">
+    <h1 class="jumbo-hide"><span class="name-explain">UPSET</span>.GEAR.HOST</h1>
+    <p class="lead jumbo-hide"><span class="name-explain">Up</span>grade last game's build into an item <span class="name-explain">set</span>.</p>
+    <p class="lead none" id="small-header"><span class="name-explain">UPSET</span>.GEAR.HOST</p>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group" id="summoner-get-control">
+                <input type="text" class="form-control" placeholder="Summoner name" id="summoner-name-input">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" type="button" id="summoner-get-button">Go!</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+</div>
+<div class="row none announcement" id="loading-results-div">
+    <span> We're fetching your match history now. This takes a few seconds. Please be patient. <img id="spinner-img" src="http://i.imgur.com/U3ivgWI.gif" height="30" width="30" /> </span>
+</div>
+<div class="row none" id="error-results-div">
+    <span id="error-text-span"></span>
+</div>
+<div class="row none" id="build-set-results">
+    <div class="row announcement" id="games-found">
+        <span> We found games! Click on a summary to see more / download your build. </span>
+    </div>
+</div>

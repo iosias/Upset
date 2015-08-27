@@ -1,0 +1,40 @@
+﻿
+@section scripts
+{
+    <script type="text/javascript">
+        prepEverything();
+    </script>
+}
+<div class="download-overlay none">
+    <div class="download-popover">
+        <div class="download-popover-header">Download Instructions</div>
+        <div class="download-popover-body">
+            <ol class="download-instructions">
+                <li>Name this build<input type="text" class="form-control" placeholder="Build Name" id="build-name-input"></li>
+                <li>
+                    <div>Right-click and save <a id="build-download-link">this link</a> to your League of Legends <span id="download-champ-name-span"></span> builds folder</div>
+                    <div><span class="filepath" title="We're guessing at this part"><span class="file-path-guess">C:\Riot Games\</span>League of Legends\Config\Champions\<span id="champ-key-replace"></span>\Recommended\</span></div>
+                </li>
+                <li>In game while shopping, change your recommended page to this one</li>
+                <li>Dominate</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" id="headertron">
+    <h1><span class="name-explain">UPSET</span>.GEAR.HOST</h1>
+    <p class="lead"><span class="name-explain">Up</span>grade last game's build into an item <span class="name-explain">set</span>.</p>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Summoner name" id="summoner-name-input">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" type="button" id="summoner-get-button">Go!</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+</div>
+
+<div class="row none" id="build-set-results">
+</div>
